@@ -6,13 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/user/{id}")
 public class UserController {
 	@Autowired
 	private UserService userService;
 
 	@GetMapping
-	String getUserById(int id) {
+	String getUserById(@PathVariable Integer id) {
+	    if(id == null){
+            return "id cannot be empty";
+        }
 		UserVo vo=userService.getUserById(id);
 		if(vo == null){
 			return null;
