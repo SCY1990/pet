@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.dao.ParamMapper" >
+  <select id="getResourceParam"  resultType="com.boot.vo.ParamVo">
+    select
+      id,
+      dice_default_num  diceDefaultNum,
+      dice_recover_time  diceRecoverTime,
+      dice_max_value  diceMaxValue,
+      dice_min_value  diceMinValue,
+      per_step_gold  perStepGold,
+      per_step_exp  perStepExp,
+      plunder_gold  plunderGold,
+      fatigue_max_num  fatigueMaxNum,
+      fatigue_recover_time  fatigueRecoverTime,
+      friends_max_num  friendsMaxNum,
+      reset_time  resetTime,
+      match_range  matchRange
+   from 
+      resource_param
+  </select>
+  
+</mapper>
