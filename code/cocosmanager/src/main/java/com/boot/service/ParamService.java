@@ -12,5 +12,5 @@ import com.boot.vo.ParamVo;
  */
 public interface ParamService {
 
-	public ParamVo getResourceParam();
+	ParamVo getResourceParam();
 }

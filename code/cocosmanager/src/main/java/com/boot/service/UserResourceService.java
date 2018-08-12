@@ -12,5 +12,5 @@ import com.boot.vo.UserResourceVo;
  */
 public interface UserResourceService {
 
-	public UserResourceVo getUserResourceById(int userId);
+	UserResourceVo getUserResourceById(int userId);
 }

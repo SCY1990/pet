@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.dao.MapMapper" >
+  <select id="getMapById"  resultType="com.boot.vo.MapVo" parameterType="Integer">
+    select
+      id,
+      map_id  mapId,
+      map_plot_id  mapPlotId,
+      plot_type  plotType,
+      plot_name  plotName
+   from
+      map
+   WHERE
+      map_id = #{mapId,jdbcType=INTEGER}
+  </select>
+  
+</mapper>
