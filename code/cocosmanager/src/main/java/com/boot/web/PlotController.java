@@ -1,6 +1,7 @@
 package com.boot.web;
 
 import com.boot.service.PlotService;
+import com.boot.vo.PlotChanceVo;
 import com.boot.vo.PlotVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,4 +26,13 @@ public class PlotController {
 		return list.toString();
 	}
 
+	@GetMapping("/chance")
+	String getPlotChance() {
+
+		List<PlotChanceVo> list= plotService.getPlotChance();
+		if(list == null || list.size() == 0){
+			return null;
+		}
+		return list.toString();
+	}
 }

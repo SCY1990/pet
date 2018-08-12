@@ -3,6 +3,7 @@
  */
 package com.boot.dao;
 
+import com.boot.vo.PlotChanceVo;
 import com.boot.vo.PlotVo;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -17,4 +18,5 @@ public interface PlotMapper {
 	
 	List<PlotVo> getPlots();
 
+	List<PlotChanceVo> getPlotChance();
 }

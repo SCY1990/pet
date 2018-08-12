@@ -12,5 +12,16 @@
    from 
       plot
   </select>
-  
+
+  <select id="getPlotChance"  resultType="com.boot.vo.PlotChanceVo">
+    select
+      id,
+      chance_num  chanceNum,
+      chance_detail  chanceDetail,
+      icon_path  iconPath,
+      award_min  awardMin,
+      award_max  awardMax
+    from
+      plot_chance
+  </select>
 </mapper>
