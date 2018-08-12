@@ -8,7 +8,7 @@ package com.boot.vo;
  *
  */
 public class ParamVo {
-	private int id;//用户ID
+	private int id;//ID
 	private int diceDefaultNum; //投掷骰子次数
 	private String diceRecoverTime; //骰子恢复时间
 	private int diceMaxValue; //骰子最大数字

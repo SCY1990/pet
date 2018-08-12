@@ -3,10 +3,7 @@ package com.boot.web;
 import com.boot.service.UserService;
 import com.boot.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
@@ -32,7 +29,7 @@ public class UserController {
 		return "insert success";
 	}
 
-	@PostMapping
+	@PutMapping
 	String updateUser(UserVo userVo) {
 		if(userVo == null){
 			return "user info cannot be empty";
