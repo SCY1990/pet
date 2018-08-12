@@ -3,16 +3,15 @@
  */
 package com.boot.dao;
 
+import com.boot.vo.UserResourceVo;
 import org.apache.ibatis.annotations.Mapper;
-
-import com.boot.vo.UserVo;
 
 /**
  * @author Administrator
  *
  */
 @Mapper
-public interface UserMapper {
+public interface UserResourceMapper {
 	
-	public UserVo getUserById(int id);
+	public UserResourceVo getUserResourceById(int userId);
 }

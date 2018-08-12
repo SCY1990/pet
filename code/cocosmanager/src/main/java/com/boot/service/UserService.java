@@ -12,5 +12,5 @@ import com.boot.vo.UserVo;
  */
 public interface UserService {
 
-	public UserVo getUserById(String id);
+	public UserVo getUserById(int id);
 }

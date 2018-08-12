@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.dao.UserResourceMapper" >
+  <select id="getUserResourceById"  resultType="com.boot.vo.UserResourceVo" parameterType="Integer">
+   select 
+       id,
+       user_id userId,
+       dice_num diceNum,
+       fatigue_num fatigueNum,
+       gold gold,
+       diamond diamond,
+       dice_reset_time diceResetTime,
+       fatigue_reset_time fatigueResetTime,
+       dice_max_num diceMaxNum,
+       fatigue_max_num fatigueMaxNum,
+       gold_addition goldAddition,
+       diamond_addition diamondAddition,
+       continous_login_days continousLoginDays,
+       update_time updateTime
+   from 
+       user_resource
+   where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  
+</mapper>

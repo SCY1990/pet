@@ -1,16 +1,12 @@
 package com.boot.web;
 
 import com.boot.service.UserService;
-import com.boot.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @EnableAutoConfiguration
@@ -33,15 +29,15 @@ public class MainController {
 	}
 
 //	@RequestMapping(value="/getUserById",produces="text/plain;charset=UTF-8")
-	@RequestMapping("/user")
-	@ResponseBody
-	String getUserById(HttpServletRequest request, HttpServletResponse response) {
-		UserVo vo=userService.getUserById(request.getParameter("uid"));
-		response.setCharacterEncoding("utf-8");
-		response.setContentType("text/html;charset=utf-8");
-//		response.setHeader("contentType", "text/html; charset=utf-8");
+//	@RequestMapping("/user")
+//	@ResponseBody
+//	String getUserById(HttpServletRequest request, HttpServletResponse response) {
+//		UserVo vo=userService.getUserById(request.getParameter("uid"));
+//		response.setCharacterEncoding("utf-8");
 //		response.setContentType("text/html;charset=utf-8");
-		System.out.println(vo.toString());
-		return vo.toString();
-	}
+////		response.setHeader("contentType", "text/html; charset=utf-8");
+////		response.setContentType("text/html;charset=utf-8");
+//		System.out.println(vo.toString());
+//		return vo.toString();
+//	}
 }

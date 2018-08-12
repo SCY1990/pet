@@ -8,146 +8,140 @@ package com.boot.vo;
  *
  */
 public class UserVo {
-	private String userId;//用户ID
-	private String nickName;//昵称
-	private String mobile;//手机
-	private String mail;//邮箱
-	private String token;
-	private String welcomeCode;//邀请码
-	private String recommendBy;//推荐人
-	private String vipLevel;//VIP等级
-	private String totolPayCheck;//充值总金额
-	private String userHead;//用户头像
-	/**
-	 * @return the userId
-	 */
-	public String getUserId() {
-		return userId;
-	}
-	/**
-	 * @param userId the userId to set
-	 */
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	/**
-	 * @return the nickName
-	 */
-	public String getNickName() {
-		return nickName;
-	}
-	/**
-	 * @param nickName the nickName to set
-	 */
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-	/**
-	 * @return the mobile
-	 */
-	public String getMobile() {
-		return mobile;
-	}
-	/**
-	 * @param mobile the mobile to set
-	 */
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-	/**
-	 * @return the mail
-	 */
-	public String getMail() {
-		return mail;
-	}
-	/**
-	 * @param mail the mail to set
-	 */
-	public void setMail(String mail) {
-		this.mail = mail;
-	}
-	/**
-	 * @return the token
-	 */
-	public String getToken() {
-		return token;
-	}
-	/**
-	 * @param token the token to set
-	 */
-	public void setToken(String token) {
-		this.token = token;
-	}
-	/**
-	 * @return the welcomeCode
-	 */
-	public String getWelcomeCode() {
-		return welcomeCode;
-	}
-	/**
-	 * @param welcomeCode the welcomeCode to set
-	 */
-	public void setWelcomeCode(String welcomeCode) {
-		this.welcomeCode = welcomeCode;
-	}
-	/**
-	 * @return the recommendBy
-	 */
-	public String getRecommendBy() {
-		return recommendBy;
-	}
-	/**
-	 * @param recommendBy the recommendBy to set
-	 */
-	public void setRecommendBy(String recommendBy) {
-		this.recommendBy = recommendBy;
-	}
-	/**
-	 * @return the vipLevel
-	 */
-	public String getVipLevel() {
-		return vipLevel;
-	}
-	/**
-	 * @param vipLevel the vipLevel to set
-	 */
-	public void setVipLevel(String vipLevel) {
-		this.vipLevel = vipLevel;
-	}
-	/**
-	 * @return the totolPayCheck
-	 */
-	public String getTotolPayCheck() {
-		return totolPayCheck;
-	}
-	/**
-	 * @param totolPayCheck the totolPayCheck to set
-	 */
-	public void setTotolPayCheck(String totolPayCheck) {
-		this.totolPayCheck = totolPayCheck;
-	}
-	/**
-	 * @return the userHead
-	 */
-	public String getUserHead() {
-		return userHead;
-	}
-	/**
-	 * @param userHead the userHead to set
-	 */
-	public void setUserHead(String userHead) {
-		this.userHead = userHead;
-	}
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "UserVo [userId=" + userId + ", nickName=" + nickName
-				+ ", mobile=" + mobile + ", mail=" + mail + ", token=" + token
-				+ ", welcomeCode=" + welcomeCode + ", recommendBy="
-				+ recommendBy + ", vipLevel=" + vipLevel + ", totolPayCheck="
-				+ totolPayCheck + ", userHead=" + userHead + "]";
-	}
-	
+	private int userId; // 用户ID
+	private String userWechatId; // 微信ID
+	private String nickName; // 昵称
+	private String mobile; // 手机
+	private String email; // 邮箱
+	private String token; // token
+	private String inviteCode; // 邀请码
+	private int reference; // 推荐人
+	private String vipLv; // VIP等级
+	private String totalRecharge; // 充值总金额
+	private String imgPath; // 用户头像
+	private String createTime; // 创建时间
+	private String updateTime; // 更新时间
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public String getUserWechatId() {
+        return userWechatId;
+    }
+
+    public void setUserWechatId(String userWechatId) {
+        this.userWechatId = userWechatId;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getInviteCode() {
+        return inviteCode;
+    }
+
+    public void setInviteCode(String inviteCode) {
+        this.inviteCode = inviteCode;
+    }
+
+    public int getReference() {
+        return reference;
+    }
+
+    public void setReference(int reference) {
+        this.reference = reference;
+    }
+
+    public String getVipLv() {
+        return vipLv;
+    }
+
+    public void setVipLv(String vipLv) {
+        this.vipLv = vipLv;
+    }
+
+    public String getTotalRecharge() {
+        return totalRecharge;
+    }
+
+    public void setTotalRecharge(String totalRecharge) {
+        this.totalRecharge = totalRecharge;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        return "UserVo{" +
+                "userId='" + userId + '\'' +
+                ", userWechatId='" + userWechatId + '\'' +
+                ", nickName='" + nickName + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", email='" + email + '\'' +
+                ", token='" + token + '\'' +
+                ", inviteCode='" + inviteCode + '\'' +
+                ", reference='" + reference + '\'' +
+                ", vipLv='" + vipLv + '\'' +
+                ", totalRecharge='" + totalRecharge + '\'' +
+                ", imgPath='" + imgPath + '\'' +
+                ", createTime='" + createTime + '\'' +
+                ", updateTime='" + updateTime + '\'' +
+                '}';
+    }
 }

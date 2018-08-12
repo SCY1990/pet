@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserMapper userMapper;
 
-	public UserVo getUserById(String id) {
+	public UserVo getUserById(int id) {
         return userMapper.getUserById(id);
     }
 }

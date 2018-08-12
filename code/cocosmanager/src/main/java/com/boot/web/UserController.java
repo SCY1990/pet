@@ -1,23 +1,24 @@
 package com.boot.web;
 
-import com.boot.service.ParamService;
-import com.boot.vo.ParamVo;
+import com.boot.service.UserService;
+import com.boot.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/param")
-public class ParamController {
+@RequestMapping("/user")
+public class UserController {
 	@Autowired
-	private ParamService paramService;
+	private UserService userService;
 
 	@GetMapping
-	String getResourceParam() {
-
-		ParamVo param = paramService.getResourceParam();
-		return param.toString();
+	String getUserById(int id) {
+		UserVo vo=userService.getUserById(id);
+		if(vo == null){
+			return null;
+		}
+		return vo.toString();
 	}
-
 }

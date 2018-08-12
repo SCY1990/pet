@@ -8,121 +8,121 @@ package com.boot.vo;
  *
  */
 public class ParamVo {
-	private String id;//用户ID
-	private String diceDefaultNum; //投掷骰子次数
+	private int id;//用户ID
+	private int diceDefaultNum; //投掷骰子次数
 	private String diceRecoverTime; //骰子恢复时间
-	private String diceMaxValue; //骰子最大数字
-	private String diceMinValue; //骰子最小数字
-	private String perStepGold; //每步获得金币
-	private String perStepExp; //每步获得经验
+	private int diceMaxValue; //骰子最大数字
+	private int diceMinValue; //骰子最小数字
+	private int perStepGold; //每步获得金币
+	private int perStepExp; //每步获得经验
 	private String plunderGold; //掠夺金币
-	private String fatigueMaxNum; //宠物疲劳上限
+	private int fatigueMaxNum; //宠物疲劳上限
 	private String fatigueRecoverTime; //疲劳恢复速度
-	private String friendsMaxNum; //好友上限
+	private int friendsMaxNum; //好友上限
 	private String resetTime;// 每日重置时间点
-	private String matchRange;// 匹配等级范围
+	private int matchRange;// 匹配等级范围
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public String getDiceDefaultNum() {
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getDiceDefaultNum() {
 		return diceDefaultNum;
+	}
+
+	public void setDiceDefaultNum(int diceDefaultNum) {
+		this.diceDefaultNum = diceDefaultNum;
 	}
 
 	public String getDiceRecoverTime() {
 		return diceRecoverTime;
 	}
 
-	public String getDiceMaxValue() {
+	public void setDiceRecoverTime(String diceRecoverTime) {
+		this.diceRecoverTime = diceRecoverTime;
+	}
+
+	public int getDiceMaxValue() {
 		return diceMaxValue;
 	}
 
-	public String getDiceMinValue() {
+	public void setDiceMaxValue(int diceMaxValue) {
+		this.diceMaxValue = diceMaxValue;
+	}
+
+	public int getDiceMinValue() {
 		return diceMinValue;
 	}
 
-	public String getPerStepGold() {
+	public void setDiceMinValue(int diceMinValue) {
+		this.diceMinValue = diceMinValue;
+	}
+
+	public int getPerStepGold() {
 		return perStepGold;
 	}
 
-	public String getPerStepExp() {
+	public void setPerStepGold(int perStepGold) {
+		this.perStepGold = perStepGold;
+	}
+
+	public int getPerStepExp() {
 		return perStepExp;
+	}
+
+	public void setPerStepExp(int perStepExp) {
+		this.perStepExp = perStepExp;
 	}
 
 	public String getPlunderGold() {
 		return plunderGold;
 	}
 
-	public String getFatigueMaxNum() {
+	public void setPlunderGold(String plunderGold) {
+		this.plunderGold = plunderGold;
+	}
+
+	public int getFatigueMaxNum() {
 		return fatigueMaxNum;
+	}
+
+	public void setFatigueMaxNum(int fatigueMaxNum) {
+		this.fatigueMaxNum = fatigueMaxNum;
 	}
 
 	public String getFatigueRecoverTime() {
 		return fatigueRecoverTime;
 	}
 
-	public String getFriendsMaxNum() {
+	public void setFatigueRecoverTime(String fatigueRecoverTime) {
+		this.fatigueRecoverTime = fatigueRecoverTime;
+	}
+
+	public int getFriendsMaxNum() {
 		return friendsMaxNum;
+	}
+
+	public void setFriendsMaxNum(int friendsMaxNum) {
+		this.friendsMaxNum = friendsMaxNum;
 	}
 
 	public String getResetTime() {
 		return resetTime;
 	}
 
-	public String getMatchRange() {
-		return matchRange;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public void setDiceDefaultNum(String diceDefaultNum) {
-		this.diceDefaultNum = diceDefaultNum;
-	}
-
-	public void setDiceRecoverTime(String diceRecoverTime) {
-		this.diceRecoverTime = diceRecoverTime;
-	}
-
-	public void setDiceMaxValue(String diceMaxValue) {
-		this.diceMaxValue = diceMaxValue;
-	}
-
-	public void setDiceMinValue(String diceMinValue) {
-		this.diceMinValue = diceMinValue;
-	}
-
-	public void setPerStepGold(String perStepGold) {
-		this.perStepGold = perStepGold;
-	}
-
-	public void setPerStepExp(String perStepExp) {
-		this.perStepExp = perStepExp;
-	}
-
-	public void setPlunderGold(String plunderGold) {
-		this.plunderGold = plunderGold;
-	}
-
-	public void setFatigueMaxNum(String fatigueMaxNum) {
-		this.fatigueMaxNum = fatigueMaxNum;
-	}
-
-	public void setFatigueRecoverTime(String fatigueRecoverTime) {
-		this.fatigueRecoverTime = fatigueRecoverTime;
-	}
-
-	public void setFriendsMaxNum(String friendsMaxNum) {
-		this.friendsMaxNum = friendsMaxNum;
-	}
-
 	public void setResetTime(String resetTime) {
 		this.resetTime = resetTime;
 	}
 
-	public void setMatchRange(String matchRange) {
+	public int getMatchRange() {
+		return matchRange;
+	}
+
+	public void setMatchRange(int matchRange) {
 		this.matchRange = matchRange;
 	}
 
