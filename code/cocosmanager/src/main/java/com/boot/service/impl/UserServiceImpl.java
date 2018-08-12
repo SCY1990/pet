@@ -22,4 +22,12 @@ public class UserServiceImpl implements UserService {
 	public UserVo getUserById(int id) {
         return userMapper.getUserById(id);
     }
+
+	public int insertUser(UserVo userVo) {
+		return userMapper.insertUser(userVo);
+	}
+
+	public int updateUser(UserVo userVo) {
+		return userMapper.updateUser(userVo);
+	}
 }

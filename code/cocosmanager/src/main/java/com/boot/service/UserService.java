@@ -12,5 +12,9 @@ import com.boot.vo.UserVo;
  */
 public interface UserService {
 
-	public UserVo getUserById(int id);
+	UserVo getUserById(int id);
+
+	int insertUser(UserVo userVo);
+
+	int updateUser(UserVo userVo);
 }

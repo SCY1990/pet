@@ -14,5 +14,9 @@ import com.boot.vo.UserVo;
 @Mapper
 public interface UserMapper {
 	
-	public UserVo getUserById(int id);
+	UserVo getUserById(int id);
+
+	int insertUser(UserVo userVo);
+
+	int updateUser(UserVo userVo);
 }
