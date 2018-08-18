@@ -1,12 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.boot.dao.UserMapper" >
-  <select id="getUserById"  resultType="com.boot.vo.UserVo" parameterType="java.lang.String">
-   select 
-           id, nick_name, mobile,email,token
-   from 
-        user  
-       where id = #{id,jdbcType=VARCHAR}
-  </select>
-  
+    <select id="getUserById"  resultType="com.boot.vo.UserVo" parameterType="Integer">
+        select
+          id,
+          user_wechat_id userWechatId,
+          nick_name nickName,
+          mobile mobile,
+          email email,
+          token token,
+          invite_code inviteCode,
+          reference reference,
+          vip_lv vipLv,
+          total_recharge totalRecharge,
+          img_path imgPath,
+          create_time createTime,
+          update_time updateTime
+        from
+          user
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <insert id="insertUser"  parameterType="com.boot.vo.UserVo">
+        insert into user(
+          user_wechat_id,
+          nick_name,
+          mobile,
+          email,
+          token,
+          invite_code,
+          reference,
+          create_time,
+          update_time
+        )
+        VALUES(
+          #{userWechatId,jdbcType=VARCHAR},
+          #{nick_name,jdbcType=VARCHAR},
+          #{mobile,jdbcType=VARCHAR},
+          #{email,jdbcType=VARCHAR},
+          #{token,jdbcType=VARCHAR},
+          #{inviteCode,jdbcType=VARCHAR},
+          #{reference,jdbcType=VARCHAR},
+          CURRENT_TIMESTAMP,
+          CURRENT_TIMESTAMP
+        )
+    </insert>
+
+    <update id="updateUser"  parameterType="com.boot.vo.UserVo">
+        update user
+        set
+          nick_name = #{nick_name,jdbcType=VARCHAR},
+          mobile = #{mobile,jdbcType=VARCHAR},
+          email = #{email,jdbcType=VARCHAR},
+          token = #{token,jdbcType=VARCHAR},
+          invite_code = #{inviteCode,jdbcType=VARCHAR},
+          reference = #{reference,jdbcType=VARCHAR},
+          update_time = CURRENT_TIMESTAMP
+        WHERE
+          id = #{id,jdbcType=INTEGER}
+    </update>
 </mapper>
